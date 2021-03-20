@@ -10,11 +10,13 @@
 <body>
 
 <div th:include="common/header::header"></div>
+
+<div class="main layui-clear">
     <div class="wrap">
         <div class="content">
             <div class="fly-tab fly-tab-index">
         <span>
-          <a href="/index">全部帖</a>
+           <a href="/index">全部帖</a>
            <a href="/index?type=good">精品帖</a>
            <a href="/index?type=top">置顶帖</a>
         </span>
@@ -80,8 +82,7 @@
             <dt class="fly-panel-title">近一月热门帖子</dt>
             {{# layui.each(d.data, function(index, item){ }}
             <dd>
-                <a href="posts/detail?id={
-                {item[0]}}">{{item[1]}}</a>
+                <a href="posts/detail?id={{item[0]}}">{{item[1]}}</a>
                 <span><i class="iconfont">&#xe60c;</i> {{item[2]}}</span>
             </dd>
             {{# }); }}

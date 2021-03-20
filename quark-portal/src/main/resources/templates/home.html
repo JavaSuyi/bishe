@@ -10,6 +10,8 @@
 <body>
 
 <div th:include="common/header::header"></div>
+
+<div class="main layui-clear">
     <div class="wrap">
         <div class="content">
             <div class="fly-tab fly-tab-index">
@@ -106,7 +108,7 @@
             length: 15,
             type: type,
             search: search
-        }, function (data) {
+        }, function (data) {[]
 
             if (data.status == 500){
                 layer.msg(data.error, {icon: 5});
